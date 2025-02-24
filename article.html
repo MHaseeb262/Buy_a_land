@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy a land</title>
+
+    <link href="src/output.css" rel="stylesheet">
+
+    <!-- Font-Family  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <style>
+        .hover-effect:hover {
+            padding-bottom: 2px;
+            color: #F37021;
+            border-bottom: 1px solid #F37021;
+            transition: all 0.3s ease-out;
+        }
+
+        .primary-btn:hover {
+            background-color: #201A11;
+            transition: all 0.3s ease-out;
+        }
+
+        .primary-btn:hover a {
+            color: #F37021;
+        }
+
+        .secoundary-btn:hover {
+            transition: all 0.3s ease-out;
+            background-color: transparent;
+        }
+
+        .secoundary-btn:hover a {
+            color: #394D09;
+        }
+
+        .dropdown-icon {
+            transition: transform 0.3s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown-icon:hover svg path {
+            stroke: #F37021;
+        }
+
+        .article:hover {
+            background-color: #CE9E0D;
+            border: 1px solid #CE9E0D;
+            box-shadow: 10px 10px 10px rgba(31, 43, 43, 0.1);
+        }
+
+        .article:hover img {
+            height: 212px;
+            transition: all 0.3s ease-out;
+        }
+
+        .article:hover .article-detail {
+            padding-bottom: 40px;
+            transition: all 0.3s ease-out;
+        }
+
+        .article:hover .ctg-name {
+            color: #FFFFFF;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="w-full bg-white px-5 sm:px-10 py-5 fixed z-10">
+        <nav class="w-full flex justify-between items-center">
+            <div class="nav-links hidden lg:block">
+                <ul class="flex gap-5 font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                    <li>
+                        <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                            <a class="hover-effect" href="#how-it's-work">How it works</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                            <a class="hover-effect" href="#why-trust-us">Why trust us?</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                            <a class="hover-effect" href="#FAQs">FAQs</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="max-w-[200px] sm:max-w-none brand-logo">
+                <a href="index.html"><img src="images/brand-name.svg" alt="brand-logo" /></a>
+            </div>
+            <div class="flex gap-5 items-center btn-links">
+                <div class="flex items-center gap-1">
+                    <div
+                        class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11] !bg-transparent btn">
+                        <a href="#">Blog</a>
+                    </div>
+                    <div class="dropdown-icon w-6 h-6 flex items-center justify-center">
+                        <svg class="dropdown-svg-icon" width="12" height="8" viewBox="0 0 15 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.66797 1L7.66797 7L13.668 1" stroke="#201A11" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:block primary-btn cursor-pointer w-[156px] py-2 rounded-[100px] bg-[#F37021] text-center">
+                    <a class="font-[Fira Sans] text-[16px] font-bold leading-6 text-[#201A11]" href="#">Apply
+                        now</a>
+                </div>
+            </div>
+            <div
+                class="dropdown-box w-[300px] sm:!w-[378px] absolute top-[60px] right-[20px] sm:right-[50px] md:right-[216px] p-2.5 bg-white flex flex-col gap-2.5 rounded-[10px] shadow-[0_0_40px_rgba(0,0,0,0.1)] opacity-0 invisible transition-all duration-300 ease-out">
+                <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                    <a class="hover-effect" href="blog.html">Top-rated articles</a>
+                </div>
+                <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                    <a class="hover-effect" href="article.html">How to Sell Land Online and NOT Get SCAMMED</a>
+                </div>
+                <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                    <a class="hover-effect" href="#">Are Land Buying Companies Legit?</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="w-full pt-25 md:pt-30 pb-20">
+        <div class="w-[90%] xl:w-[1200px] m-[0_auto] flex flex-col gap-5 sm:gap-10">
+
+            <div>
+                <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]"
+                    href="blog.html">Back
+                    to Blog
+                </a>
+            </div>
+
+            <div class="w-full flex flex-col gap-2.5">
+
+                <p
+                    class="font-[Fira Sans] text-[20px] sm:text-[30px] lg:text-[40px] font-bold leading-8 sm:leading-10 tracking-[0.04em] text-[#201A11] uppercase">
+                    How to Sell Land Online and NOT Get SCAMMED
+                </p>
+
+                <div class="flex gap-5">
+
+                    <p
+                        class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                        CATEGORY NAME</p>
+                    <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                        Author’s Name - DD/MM/YYYY</p>
+
+                </div>
+                <img class="w-full h-[423px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-01.jpg"
+                    alt="blog-img-01">
+                <div class="relative pt-5 flex flex-col gap-5 items-center xl:!items-start">
+
+                    <div class="max-w-[754px] px-5 sm:!px-10">
+
+                        <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">Selling land
+                            online is actually pretty easy and 100% safe…if you do it the right
+                            way. It all comes down to how you ‘close’ the transaction. Whether you meet your buyer
+                            in-person or online, stay protected and close the right way. <br>
+                            Reasons Why to Sell Land Online…
+                        </p>
+                        <ul class="list-disc list-inside pl-2">
+                            <li>Attract Buyers from Anywhere – not just folks who happen to see your For Sale sign</li>
+                            <li>Sell Faster – the more people who know about your land for sale the faster it can sell
+                            </li>
+                            <li>Keep More of the Proceeds from the Sale – real estate agents typically take 10% of the
+                                sales price as their commission</li>
+                        </ul>
+                        <p><br> There are Two Ways to Sell Your Land Online…</p>
+
+                    </div>
+                    <div
+                        class="relative xl:!absolute right-0 xl:!right-[40px] top-0 xl:!top-[-50px] w-full sm:!w-[500px] xl:!w-[386px] border border-solid border-[#F37021] bg-[#F37021] rounded-[10px] flex flex-col shadow-[0_20px_40px_rgba(63,48,26,0.2)]">
+
+                        <p
+                            class="p-[20px_32px_10px] font-[Fira Sans] text-[24px] font-bold leading-8 text-white uppercase text-center">
+                            Get Up to 12 Cash Offers
+                            for Your Vacant Land</p>
+                        <p
+                            class="p-[10px_64px] font-[Fira Sans] text-[16px] font-medium leading-[19px] tracking-[0.04em] text-white">
+                            Tell us about the vacant land you want to sell.</p>
+                        <p
+                            class="p-[12px_64px] font-[Fira Sans] text-[16px] font-medium leading-[19px] tracking-[0.04em] text-white">
+                            We will send you cash offers.</p>
+                        <p
+                            class="p-[12px_64px] font-[Fira Sans] text-[16px] font-medium leading-[19px] tracking-[0.04em] text-white">
+                            Contact 12 Land Investors now.</p>
+                        <div
+                            class="secoundary-btn cursor-pointer w-[306px] p-[8px_0] bg-[#394D09] border-[2px] border-solid border-[#394D09] rounded-[100px] m-[10px_auto_20px] text-center">
+                            <a class="font-[Fira Sans] text-[16px] font-bold leading-6 text-white" href="#">Get in
+                                touch</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="w-full px-5 sm:!px-10 flex flex-col gap-5">
+
+                <ol
+                    class="list-decimal list-inside font-[Fira Sans] text-[20px] sm:text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                    <li>Sell Your Vacant Land to a ‘We Buy Land’ Online Company</li>
+                </ol>
+                <div class="div">
+                    <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">There are hundreds
+                        of ‘we buy land’ companies throughout the US. <br>
+                        These companies are primarily mom-and-pop real estate investment companies that specialize in
+                        buying and selling vacant land. <br>
+                        The major benefit for selling your vacant land to a ‘we buy land’ company is that the company
+                        will do all the work for you. <br>
+                        These companies can make the transaction run smoothly. <br>
+                        And, you don’t need to take photos, put up a for sale sign, field calls from prospective buyers,
+                        etc. <br>
+                        Plus, they can buy the property quickly. <br>
+                        When you sell your land to an investor you…
+                    </p>
+                    <ul
+                        class="list-disc list-inside pl-2 font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">
+                        <li>Don’t need to take photos and write ads for your vacant land</li>
+                        <li>Don’t need to answer calls from prospective buyers</li>
+                        <li>Just need to sign a few documents and get your check</li>
+                        <li>Can sell your land fast – usually within two to three weeks</li>
+                        <li>Won’t get top dollar</li>
+                    </ul>
+                </div>
+
+                <ol
+                    class="list-decimal list-inside font-[Fira Sans] text-[20px] sm:text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                    <li class="invisible absolute">&nbsp</li>
+                    <li>Market and Sell Your Vacant Land Yourself</li>
+                </ol>
+                <div class="div">
+                    <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">We’re talking about
+                        submitting your property’s information on real estate websites
+                        like <a class="underline" href="https://www.zillow.com/">Zillow.com</a>.
+                        Here’s an awesome <a class="underline"
+                            href="https://retipster.com/real-estate-listings-post-ads-free/">list of free websites</a> 
+                        to where you can advertise your
+                        property. <br>
+                        The big plus for selling your land on your own is that you’ll likely sell for a higher price.
+                        <br>
+                        But…do you have the time and energy to sell your land on your own? <br>
+                        Are you familiar with the process of a real estate transaction? <br>
+                        Do you have quality photographs of your vacant land? <br>
+                        Are you ready to answer (hopefully) dozens of calls and emails from prospective buyers? <br>
+                        Do you know the zoning and restrictions of the property? <br>
+                        When you sell your land yourself you’ll…
+                    </p>
+                    <ul
+                        class="list-disc list-inside pl-2 font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">
+                        <li>Likely sell for a higher price (compared to selling to an investor)</li>
+                        <li>Need to take photos, write ads, and answer calls from prospective buyers</li>
+                        <li>Need to know the basics of completing a real estate transaction</li>
+                    </ul>
+                </div>
+
+                <div class="py-2.5 px-5 bg-[#EBE0D580] border-l-4 border-[#CE9E0D] rounded-[0_10px_10px_0]">
+                    <p class="font-[Fira Sans] text-[20px] font-medium leading-8 text-[#CE9E0D] italic">The question
+                        is – do you want to spend the time and energy to make a few more dollars
+                        in selling your vacant land?
+                    </p>
+                </div>
+                <div class="para">
+
+                    <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">When you think
+                        about it…’selling land online’ really only means you have found a buyer online. The real
+                        question is how to complete the real estate transaction with someone you won’t meet in-person.
+                        <br>
+                        In real estate lingo the completion of a real estate transaction is called a ‘closing.’ <br>
+                        So, how can we successfully and safely ‘close’ without meeting our buyer in-person? <br>
+                        In its most basic form a closing consists of two things…
+                    </p>
+                    <ol
+                        class="list-decimal list-inside pl-2 font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">
+                        <li>The seller provides a deed</li>
+                        <li>The buyer provides the money</li>
+                    </ol>
+                    <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">A deed is a
+                        document – typically just a page or two – that states you are selling a particular piece of
+                        property. <br>
+                        For the deed to become a legitimate legal document you must…
+                    </p>
+                    <ul
+                        class="list-disc list-inside pl-2 font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">
+                        <li>Sign the deed in the presence of a notary</li>
+                        <li>Have the deed recorded in the official record</li>
+                    </ul>
+                    <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">Now for the money
+                        part… <br>
+                        Protect yourself from getting scammed and hire a middleman to handle the closing. <br>
+                        This middleman will collect the money from the buyer before you sign the deed. <br>
+                        You can confirm that the money is in place before signing over your property. <br>
+                        Then, after you have confirmed the money is in place, you can sign the deed and send to your
+                        middleman. <br>
+                        The middleman will then provide the deed to the buyer.
+                    </p>
+
+                </div>
+                <div class="py-2.5 px-5 bg-[#EBE0D580] border-l-4 border-[#CE9E0D] rounded-[0_10px_10px_0]">
+                    <p class="font-[Fira Sans] text-[20px] font-medium leading-8 text-[#CE9E0D] italic">Protect
+                        yourself from getting scammed and hire a middleman to handle the closing.</p>
+                </div>
+                <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09]">Close with a Title
+                    Company or Attorney
+                </p>
+
+                <div class="flex flex-col lg:flex-row gap-5">
+
+                    <div class="max-w-[550px]">
+
+                        <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">Most real
+                            estate transactions are handled by some sort of middleman. Each state has it’s own laws on
+                            what type of entity can be this middleman. <br>
+                            <span
+                                class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#F37021] underline decoration-auto underline-offset-auto">Some
+                                states require real estate attorneys while other states allow for a title
+                                company.</span> <br>
+                            Title companies and attorneys generally do the same thing. <br>
+                            And, generally, title companies will be more affordable than attorneys. <br>
+                            And, you could always hire a real estate attorney instead of a title company. <br>
+                            The title company will collect the money from the buyer upfront. <br>
+                            Then collect the signed and notarized deed from the seller. <br>
+                            These title companies are legally obligated to make sure the seller gets their proceeds.
+                            <br> <br>
+
+                            Hire a title company for a risk-free transaction. <br>
+                            That’s it! You can safely sell your land online by hiring a title company or attorney to act
+                            as the middleman for your transaction. <br>
+                            But…title companies and attorneys can cost thousands of dollars to hire.
+                        </p>
+                        <ul class="list-disc pl-6 font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">
+                            <li>Title Companies and Attorneys are legally obligated to make sure you get your money</li>
+                            <li>They can properly prepare the deed and other legal documents for you to sign</li>
+                            <li>They typically cost $1,000 or more</li>
+                            <li>Highly recommended if you sell to an investor or you sell by yourself</li>
+                        </ul>
+                        <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">What if you are
+                            selling your land for say….$1,000? <br>
+                            It’d be silly to hire a title company, pay them a thousand dollars and you collect nothing.
+                        </p>
+
+                    </div>
+                    <div class="max-w-[550px]">
+                        <img class="w-full h-auto object-cover object-center rounded-[10px]" src="images/article-img-01.webp"
+                            alt="article-img-01">
+                    </div>
+
+                </div>
+
+                <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09]">Close with Cash-in-hand
+                </p>
+                <div class="para">
+
+                    <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">For smaller size
+                        deals, the notary will act as the middleman. <br>
+                        The buyer will send a cashier’s check (funds are already provided) to the notary. <br>
+                        The notary will physically meet the seller. <br>
+                        Sign the deed, notarized and then physically hand the cashier’s check to the seller.
+                    </p>
+                    <ul
+                        class="list-disc list-inside pl-2 font-[Fira Sans] text-[16px] font-normal leading-6 text-[#201A11]">
+                        <li>A notary can act as a middleman in your closing</li>
+                        <li>The notary will meet you in person and physically hand you a cashier’s Check</li>
+                        <li>Only recommended if you are selling to an experienced investor</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div
+                class="w-full flex flex-col gap-2.5 bg-[#394D09] px-10 py-5 rounded-[10px] items-center sm:!items-start">
+
+                <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#F37021] text-center sm:!text-start">
+                    Are you looking to sell
+                    your land online?</p>
+                <p class="font-[Fira Sans] text-[16px] font-bold leading-6 text-[#CE9E0D] text-center sm:!text-start">
+                    <span class="text-[#F37021] underline decoration-auto underline-offset-auto">Fill out our
+                        form</span> and we’ll send your property’s information to our network of 12
+                    professional, experienced land investors. You’ll get cash offers sent right to you email inbox!
+                </p>
+
+            </div>
+
+            <div class="w-full flex flex-col gap-5 sm:gap-10">
+
+                <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">Related Posts
+                </p>
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 xl:!grid-cols-3 gap-5">
+
+                    <div class="bg-white rounded-[10px] article">
+
+                        <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-04.jpg"
+                            alt="blog-img-04.jpg">
+                        <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                            <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                                <p
+                                    class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                    CATEGORY NAME</p>
+                                <p
+                                    class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                    Author’s Name - DD/MM/YYYY</p>
+
+                            </div>
+                            <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                                Blog’s title goes here in one or two lines if needed
+                            </p>
+                            <div>
+                                <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                    href="article.html">Read more</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="bg-white rounded-[10px] article">
+
+                        <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-03.jpg"
+                            alt="blog-img-03">
+                        <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                            <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                                <p
+                                    class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                    CATEGORY NAME</p>
+                                <p
+                                    class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                    Author’s Name - DD/MM/YYYY</p>
+
+                            </div>
+                            <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                                Blog’s title goes here in one or two lines if needed
+                            </p>
+                            <div>
+                                <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                    href="article.html">Read more</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="bg-white rounded-[10px] article">
+
+                        <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-10.jpg"
+                            alt="blog-img-10.jpg">
+                        <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                            <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                                <p
+                                    class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                    CATEGORY NAME</p>
+                                <p
+                                    class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                    Author’s Name - DD/MM/YYYY</p>
+
+                            </div>
+                            <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                                Blog’s title goes here in one or two lines if needed
+                            </p>
+                            <div>
+                                <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                    href="article.html">Read more</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full py-15 md:py-30 bg-[#EBE0D5]">
+        <div class="w-[90%] sm:w-[80%] max-w-[996px] mx-auto flex flex-col gap-5 items-center">
+            <p
+                class="font-[Fira Sans] text-[30px] md:text-[40px] font-bold leading-10 tracking-[0.04em] text-[#394D09] text-center">
+                Ready to Sell Your Land Fast?
+            </p>
+            <p
+                class="font-[Fira Sans] text-[16px] md:text-[20px] font-normal leading-6 tracking-[0.04em] text-[#394D09] text-center">
+                Get Cash Offers for Your Land Sent to Your Email Inbox.
+            </p>
+            <div class="primary-btn w-[365px] py-2 bg-[#F37021] rounded-[100px]">
+                <a class="font-[Fira Sans] text-[16px] font-bold leading-6 text-[#201A11] flex items-center justify-center"
+                    href="#">Tell Us About the Land You Want to Sell</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full pt-20 pb-10 bg-[#394D09]">
+        <div class="w-[90%] sm:w-[80%] xl:w-[1200px] mx-auto flex flex-col xl:!flex-row gap-10 justify-between">
+
+            <div class="flex flex-col gap-8 justify-between">
+                <div class="flex flex-col gap-5 xl:gap-10">
+                    <a class="cursor-pointer" href="index.html"><img src="images/brand-name.svg" alt="brand-name" /></a>
+                    <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#F37021]">
+                        How it works
+                    </p>
+                    <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#F37021]">
+                        Why trust us?
+                    </p>
+                    <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#F37021]">
+                        FAQs
+                    </p>
+                </div>
+                <p class="font-[Fira Sans] text-[16px] font-medium leading-[19px] text-[#FFCB3B]">
+                    © 2024 ReadyToBuyLand
+                </p>
+            </div>
+            <div class="flex flex-col gap-5 xl:gap-10">
+                <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#F37021]">
+                    Blog
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    Are Land Buying Companies Legit?
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    How to Sell Land Online and NOT Get SCAMMED
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    What Types of Land do ‘We Buy Land’ Websites Really Buy?
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    4 Reasons Why NOT to Hire an Agent to Sell Vacant Land
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    How Fast Can You (Really) Get Cash For Your Vacant Land?
+                </p>
+            </div>
+            <div class="flex flex-col gap-10 xl:items-end">
+                <div class="primary-btn cursor-pointer w-[156px] py-2 rounded-[100px] bg-[#F37021] text-center">
+                    <a class="font-[Fira Sans] text-[16px] font-bold leading-6 text-[#201A11]" href="#">Apply
+                        now</a>
+                </div>
+                <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#FFCB3B]">
+                    Land value map
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#FFCB3B]">
+                    Contact Us
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="JS/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+</body>
+
+</html>

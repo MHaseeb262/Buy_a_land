@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy a land</title>
+
+    <link href="src/output.css" rel="stylesheet">
+
+    <!-- Font-Family  -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <style>
+        .hover-effect:hover {
+            padding-bottom: 2px;
+            color: #F37021;
+            border-bottom: 1px solid #F37021;
+            transition: all 0.3s ease-out;
+        }
+
+        .primary-btn:hover {
+            background-color: #201A11;
+            transition: all 0.3s ease-out;
+        }
+
+        .primary-btn:hover a {
+            color: #F37021;
+        }
+
+        .dropdown-icon {
+            transition: transform 0.3s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .dropdown-icon:hover svg path {
+            stroke: #F37021;
+        }
+
+        .sub-article:hover,
+        .main-article:hover {
+            background-color: #CE9E0D;
+            border: 1px solid #CE9E0D;
+            box-shadow: 10px 10px 10px rgba(31, 43, 43, 0.1);
+        }
+
+        .main-article:hover img {
+            height: 280px;
+            transition: all 0.3s ease-out;
+        }
+
+        .sub-article:hover img {
+            height: 212px;
+            transition: all 0.3s ease-out;
+        }
+
+        .main-article:hover .main-article-detail {
+            padding-bottom: 30px;
+            transition: all 0.3s ease-out;
+        }
+
+        .sub-article:hover .sub-article-detail {
+            padding-bottom: 40px;
+            transition: all 0.3s ease-out;
+        }
+
+        .main-article:hover .visible-info {
+            display: none;
+        }
+
+        .main-article:hover .hidden-info {
+            display: block;
+        }
+
+        .sub-article:hover .ctg-name,
+        .main-article:hover .ctg-name {
+            color: #FFFFFF;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="w-full bg-[#EBE0D5] px-5 sm:px-10 py-5 fixed z-10">
+        <nav class="w-full flex justify-between items-center">
+
+            <div class="nav-links hidden lg:block">
+                <ul class="flex gap-5 font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                    <li>
+                        <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                            <a class="hover-effect" href="#how-it's-work">How it works</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                            <a class="hover-effect" href="#why-trust-us">Why trust us?</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                            <a class="hover-effect" href="#FAQs">FAQs</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="max-w-[200px] sm:max-w-none brand-logo">
+                <a href="index.html"><img src="images/brand-name.svg" alt="brand-logo" /></a>
+            </div>
+            <div class="flex gap-5 items-center btn-links">
+                <div class="flex items-center gap-1">
+                    <div
+                        class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11] !bg-transparent btn">
+                        <a href="#">Blog</a>
+                    </div>
+                    <div class="dropdown-icon w-6 h-6 flex items-center justify-center">
+                        <svg class="dropdown-svg-icon" width="12" height="8" viewBox="0 0 15 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.66797 1L7.66797 7L13.668 1" stroke="#201A11" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div
+                    class="hidden md:block primary-btn cursor-pointer w-[156px] py-2 rounded-[100px] bg-[#F37021] text-center">
+                    <a class="font-[Fira Sans] text-[16px] font-bold leading-6 text-[#201A11]" href="#">Apply
+                        now</a>
+                </div>
+            </div>
+            <div
+                class="dropdown-box w-[300] sm:w-[378px] absolute top-[60px] right-[50px] md:right-[216px] p-2.5 bg-white 
+                flex flex-col gap-2.5 rounded-[10px] shadow-[0_0_40px_rgba(0,0,0,0.1)] opacity-0 invisible transition-all duration-300 ease-out">
+                <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                    <a class="hover-effect" href="blog.html">Top-rated articles</a>
+                </div>
+                <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                    <a class="hover-effect" href="article.html">How to Sell Land Online and NOT Get SCAMMED</a>
+                </div>
+                <div class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#201A11]">
+                    <a class="hover-effect" href="#">Are Land Buying Companies Legit?</a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <section class="w-full pt-25 md:pt-30 pb-20.5 bg-[#EBE0D5]">
+        <div class="w-[90%] xl:w-[1200px] mx-auto flex flex-col gap-8 md:gap-10">
+
+            <p
+                class="font-[Fira Sans] text-[25px] md:text-[30px] lg:text-[40px] font-bold leading-[40px] tracking-[0.04em] text-[#201A11] uppercase">
+                Blog
+            </p>
+            <div class="w-full py-2.5 overflow-x-auto">
+                <div class="w-[1200px] flex gap-10 category-list">
+
+                    <div>
+                        <a class="hover-effect pb-0.5 border-b-[1px] border-[#F37021] font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#F37021]"
+                            href="#">Top
+                            Rated</a>
+                    </div>
+                    <div>
+                        <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                            href="#">Category
+                            name</a>
+                    </div>
+                    <div>
+                        <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                            href="#">Category
+                            name</a>
+                    </div>
+                    <div>
+                        <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                            href="#">Category
+                            name</a>
+                    </div>
+                    <div>
+                        <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                            href="#">Category
+                            name</a>
+                    </div>
+                    <div>
+                        <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                            href="#">Category
+                            name</a>
+                    </div>
+                    <div>
+                        <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                            href="#">Category
+                            name</a>
+                    </div>
+                    <div>
+                        <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                            href="#">Category
+                            name</a>
+                    </div>
+
+                    <!-- <div class=" fixed right-5 top-53 w-6 h-6 flex items-center justify-center backdrop-blur-xs"> -->
+                    <img class="cursor-pointer" src="images/left-arr.svg" alt="left-arr">
+                    <!-- </div> -->
+
+                </div>
+            </div>
+
+            <div class="w-full grid lg:grid-cols-2 gap-x-5 gap-y-10">
+
+                <div class="bg-white rounded-[10px] main-article">
+
+                    <img class="w-full h-[300px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-01.jpg"
+                        alt="blog-img-01">
+                    <div class="main-article-detail p-5 flex flex-col gap-2.5">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            How to Sell Land Online and NOT Get SCAMMED
+                        </p>
+                        <p class="visible-info font-[Fira Sans] text-[16px] font-normal leading-[24px] text-[#201A11]">
+                            Selling land online is actually pretty easy and 100% safe…if you do it the right way. It all
+                            comes down to how you ‘close’ the transaction...
+                        </p>
+
+                        <p
+                            class="hidden hidden-info font-[Fira Sans] text-[16px] font-normal leading-[24px] text-[#201A11]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu leo, vehicula ac
+                            ex eu, fermentum pharetra orci. Nunc semper, ligula eget placerat sollicitudin, felis lacus
+                            accumsan dui, eget rhoncus massa nulla in dolor. Sed tempor maximus neque, et facilisis enim
+                            bibendum sed....</p>
+
+                        <div class="div">
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="bg-white rounded-[10px] main-article">
+
+                    <img class="w-full h-[300px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-02.webp"
+                        alt="blog-img-02">
+                    <div class="main-article-detail p-5 flex flex-col gap-2.5">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Are Land Buying Companies Legit? 3 Tips to Choose the Right One
+                        </p>
+                        <p class="visible-info font-[Fira Sans] text-[16px] font-normal leading-[24px] text-[#201A11]">
+                            Thinking about selling your vacant land to a Land Buying Company?
+                            Here are 3 tips on how to pick the right ‘We Buy Land’ company…
+                        </p>
+
+                        <p
+                            class="hidden hidden-info font-[Fira Sans] text-[16px] font-normal leading-[24px] text-[#201A11]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed arcu leo, vehicula ac
+                            ex eu, fermentum pharetra orci. Nunc semper, ligula eget placerat sollicitudin, felis lacus
+                            accumsan dui, eget rhoncus massa nulla in dolor. Sed tempor maximus neque, et facilisis enim
+                            bibendum sed....</p>
+
+                        <div class="div">
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="w-full grid lg:grid-cols-2 xl:!grid-cols-3 gap-y-10 gap-x-5">
+
+                <div class="bg-white rounded-[10px] sub-article">
+
+                    <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-03.jpg"
+                        alt="blog-img-03">
+                    <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Blog’s title goes here in one or two lines if needed
+                        </p>
+                        <div>
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="bg-white rounded-[10px] sub-article">
+
+                    <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-04.jpg"
+                        alt="blog-img-04.jpg">
+                    <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Blog’s title goes here in one or two lines if needed
+                        </p>
+                        <div>
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="bg-white rounded-[10px] sub-article">
+
+                    <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-05.jpg"
+                        alt="blog-img-05.jpg">
+                    <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Blog’s title goes here in one or two lines if needed
+                        </p>
+                        <div>
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-[10px] sub-article">
+
+                    <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-06.jpg"
+                        alt="blog-img-06.jpg">
+                    <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Blog’s title goes here in one or two lines if needed
+                        </p>
+                        <div>
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="bg-white rounded-[10px] sub-article">
+
+                    <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/img-frame-02.jpg"
+                        alt="img-frame-02.jpg">
+                    <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Blog’s title goes here in one or two lines if needed
+                        </p>
+                        <div>
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="bg-white rounded-[10px] sub-article">
+
+                    <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-07.jpg"
+                        alt="blog-img-07.jpg">
+                    <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Blog’s title goes here in one or two lines if needed
+                        </p>
+                        <div>
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-[10px] sub-article">
+
+                    <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-08.jpg"
+                        alt="blog-img-08">
+                    <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Blog’s title goes here in one or two lines if needed
+                        </p>
+                        <div>
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="bg-white rounded-[10px] sub-article">
+
+                    <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-09.jpg"
+                        alt="blog-img-09.jpg">
+                    <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Blog’s title goes here in one or two lines if needed
+                        </p>
+                        <div>
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="bg-white rounded-[10px] sub-article">
+
+                    <img class="w-full h-[232px] object-cover rounded-[10px_10px_0_0]" src="images/blog-img-10.jpg"
+                        alt="blog-img-10.jpg">
+                    <div class="article-detail p-5 flex flex-col gap-2.5 rounded-[0_0_10px_10px]">
+
+                        <div class="flex flex-col sm:flex-row gap-5 lg:gap-0 xl:gap-0 lg:justify-between">
+
+                            <p
+                                class="ctg-name font-[Fira Sans] text-[14px] font-semibold leading-[20px] text-[#F37021] uppercase">
+                                CATEGORY NAME</p>
+                            <p class="font-[Fira Sans] text-[14px] font-medium leading-[20px] text-[#3F301A] uppercase">
+                                Author’s Name - DD/MM/YYYY</p>
+
+                        </div>
+                        <p class="font-[Fira Sans] text-[24px] font-bold leading-8 text-[#394D09] uppercase">
+                            Blog’s title goes here in one or two lines if needed
+                        </p>
+                        <div>
+                            <a class="hover-effect font-[Fira Sans] text-[16px] font-medium leading-[24px] text-[#201A11]"
+                                href="article.html">Read more</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="w-full pt-20 pb-10 bg-[#394D09]">
+        <div class="w-[90%] sm:w-[80%] xl:w-[1200px] mx-auto flex flex-col xl:!flex-row gap-10 justify-between">
+
+            <div class="flex flex-col gap-8 justify-between">
+                <div class="flex flex-col gap-5 xl:gap-10">
+                    <a class="cursor-pointer" href="index.html"><img src="images/brand-name.svg" alt="brand-name" /></a>
+                    <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#F37021]">
+                        How it works
+                    </p>
+                    <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#F37021]">
+                        Why trust us?
+                    </p>
+                    <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#F37021]">
+                        FAQs
+                    </p>
+                </div>
+                <p class="font-[Fira Sans] text-[16px] font-medium leading-[19px] text-[#FFCB3B]">
+                    © 2024 ReadyToBuyLand
+                </p>
+            </div>
+            <div class="flex flex-col gap-5 xl:gap-10">
+                <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#F37021]">
+                    Blog
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    Are Land Buying Companies Legit?
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    How to Sell Land Online and NOT Get SCAMMED
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    What Types of Land do ‘We Buy Land’ Websites Really Buy?
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    4 Reasons Why NOT to Hire an Agent to Sell Vacant Land
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-normal leading-6 text-white">
+                    How Fast Can You (Really) Get Cash For Your Vacant Land?
+                </p>
+            </div>
+            <div class="flex flex-col gap-10 xl:items-end">
+                <div class="primary-btn cursor-pointer w-[156px] py-2 rounded-[100px] bg-[#F37021] text-center">
+                    <a class="font-[Fira Sans] text-[16px] font-bold leading-6 text-[#201A11]" href="#">Apply
+                        now</a>
+                </div>
+                <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#FFCB3B]">
+                    Land value map
+                </p>
+                <p class="font-[Fira Sans] text-[16px] font-medium leading-6 text-[#FFCB3B]">
+                    Contact Us
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="JS/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+/* @plugin "flowbite/plugin";
+@source "../node_modules/flowbite"; */
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
